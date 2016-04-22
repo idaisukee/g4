@@ -16,4 +16,20 @@ class Event {
         $this->detail = $detail;
         $this->calendar_id = $calendar_id;
     }
+
+    function to_array() {
+        $array = [
+            "start" => [
+                "dateTime" => $this->dt_start_c,
+            ],
+            "end" => [
+                "dateTime" => $this->dt_finish_c,
+            ],
+            "summary" => $this->title,
+            "detail" => $this->detail,
+        ];
+
+        return $array;
+    }
+
 }
