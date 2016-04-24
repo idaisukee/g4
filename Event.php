@@ -32,4 +32,9 @@ class Event {
         return $array;
     }
 
+    function to_json() {
+        $json = json_encode($this->to_array());
+        return $json;
+    }
+
 }
