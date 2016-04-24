@@ -22,7 +22,7 @@ class LectureLine {
         $content = $cols[4];
         $teacher_section = $cols[5];
         $teacher_rank = $cols[6];
-        $teacher_name $cols[7]
+        $teacher_name = $cols[7];
 
         $this->year = '2016';
         $this->subject = $subject;
