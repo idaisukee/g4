@@ -54,7 +54,7 @@ class Lecture {
         return $event;
     }
 
-    function __construct($year, $month, $day, $frame, $subject, $content, $teacher_section, $teacher_rank, $teacher_name, $th, $calendar_id) {
+    function __construct($year, $month, $day, $frame, $subject, $content, $teacher_section, $teacher_rank, $teacher_name, $calendar_id) {
         $start_time = start($frame);
         $finish_time = finish($frame);
 
