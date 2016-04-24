@@ -37,4 +37,16 @@ class Event {
         return $json;
     }
 
+    function insert() {
+
+        $endpoint = 'https://www.googleapis.com/calendar/v3/calendars/primary/events';
+
+        $command = 'curl -v -H "Accept: application/json" -H "Content-type: application/json" -H "Authorization: Bearer ' . $bearer . '" -X POST -d ' . $this->to_json() . ' ' . $endpoint;
+
+        echo $command;
+
+
+
+    }
+
 }
