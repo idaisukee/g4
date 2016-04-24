@@ -38,6 +38,13 @@ class Lecture {
     public $day;
     public $frame;
     public $subject;
+    public $teacher_name;
+    public $teacher_rank;
+    public $teacher_section;
+    public $content;
+    public $description;
+    $description = $content . ' ' . $teacher_section . ' ' . $teacher_rank . ' ' . $teacher_name;
+    
     public $th;
 
     public $start;
