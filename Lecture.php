@@ -45,14 +45,12 @@ class Lecture {
     public $description;
     $description = $content . ' ' . $teacher_section . ' ' . $teacher_rank . ' ' . $teacher_name;
     
-    public $th;
-
     public $start;
     public $finish;
 
     
     function to_event() {
-        $event = new Event($this->year, $this->month, $this->day, $this->start_time, $this->finish_time, $this->subject.' '.$this->th, $this->calendar_id);
+        $event = new Event($this->year, $this->month, $this->day, $this->start_time, $this->finish_time, $this->subject, $this->calendar_id);
         return $event;
     }
 
@@ -70,7 +68,6 @@ class Lecture {
         $this->start = $start;
         $this->finish = $finish;
         $this->subject = $subject;
-        $this->th = $th;
         $this->calendar_id = $calendar_id;
     }
 }
