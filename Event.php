@@ -33,17 +33,19 @@ class Event {
     }
 
     function to_json() {
-        $json = json_encode($this->to_array());
+        $json = json_encode($this->to_array(), JSON_UNESCAPED_UNICODE);
         return $json;
     }
 
     function insert() {
-
+        $bearer = shell_exec('cat constants/bearer');
+        $escaped_json = str_replace('"', '\"',$this->to_json());
         $endpoint = 'https://www.googleapis.com/calendar/v3/calendars/primary/events';
+        $command = 'curl -v -H "Accept: application/json" -H "Content-type: application/json" -H "Authorization: Bearer ' . $bearer . '" -X POST -d "' . $escaped_json . '" ' . $endpoint;
 
-        $command = 'curl -v -H "Accept: application/json" -H "Content-type: application/json" -H "Authorization: Bearer ' . $bearer . '" -X POST -d ' . $this->to_json() . ' ' . $endpoint;
 
         echo $command;
+        exec($command);
 
 
 
