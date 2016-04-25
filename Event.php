@@ -38,7 +38,12 @@ class Event {
     }
 
     function insert() {
-        $bearer = shell_exec('cat constants/bearer');
+        $token_json = shell_exec('sh reflesh.sh');
+        //        print_r($token_json);
+        $token_array = json_decode($token_json, true);
+        //        print_r($token_array);
+        $bearer = $token_array['access_token'];
+        //print_r($bearer);
         $escaped_json = str_replace('"', '\"',$this->to_json());
         $endpoint = 'https://www.googleapis.com/calendar/v3/calendars/' . $this->calendar_id .  '/events';
         $command = 'curl -v -H "Accept: application/json" -H "Content-type: application/json" -H "Authorization: Bearer ' . $bearer . '" -X POST -d "' . $escaped_json . '" ' . $endpoint;
