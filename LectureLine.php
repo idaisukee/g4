@@ -33,7 +33,7 @@ class LectureLine {
         $this->teacher_section = $teacher_section;
         $this->teacher_rank = $teacher_rank;
         $this->teacher_name = $teacher_name;
-        $this->calendar_name = '2016e4';
+        $this->calendar_name = '2016e4E';
         $this->calendar_id = self::calendar_id($this->calendar_name);
     }
 }
