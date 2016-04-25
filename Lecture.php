@@ -72,7 +72,7 @@ class Lecture {
         $this->teacher_section = $teacher_section;
         $this->teacher_rank = $teacher_rank;
         $this->teacher_name = $teacher_name;
-        $this->detail = $content . ' ' . $teacher_section . ' ' . $teacher_rank . ' ' . $teacher_name;
+        $this->detail = $content . '\n' . $teacher_section . '\n' . $teacher_rank . '\n' . $teacher_name;
         $this->calendar_id = $calendar_id;
     }
 }
