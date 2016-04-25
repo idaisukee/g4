@@ -47,6 +47,8 @@ class Event {
         echo $command;
         exec($command);
 
+        print_r($this);
+
 
 
     }
