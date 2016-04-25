@@ -1,1 +1,1 @@
-curl --data "refresh_token=`cat reflesh_token`" --data "client_id=`cat client_id`" --data "client_secret=`cat client_secret`" --data "grant_type=refresh_token" https://www.googleapis.com/oauth2/v4/token
+curl --data "refresh_token=`cat constants/reflesh_token`" --data "client_id=`cat constants/client_id`" --data "client_secret=`cat constants/client_secret`" --data "grant_type=refresh_token" https://www.googleapis.com/oauth2/v4/token
