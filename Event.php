@@ -40,7 +40,7 @@ class Event {
     function insert() {
         $bearer = shell_exec('cat constants/bearer');
         $escaped_json = str_replace('"', '\"',$this->to_json());
-        $endpoint = 'https://www.googleapis.com/calendar/v3/calendars/primary/events';
+        $endpoint = 'https://www.googleapis.com/calendar/v3/calendars/' . $this->calendar_id .  '/events';
         $command = 'curl -v -H "Accept: application/json" -H "Content-type: application/json" -H "Authorization: Bearer ' . $bearer . '" -X POST -d "' . $escaped_json . '" ' . $endpoint;
 
 
