@@ -26,7 +26,7 @@ class Event {
                 "dateTime" => $this->dt_finish_c,
             ],
             "summary" => $this->title,
-            "detail" => $this->detail,
+            "description" => $this->detail,
         ];
 
         return $array;
