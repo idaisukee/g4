@@ -8,5 +8,4 @@ if (0 === preg_match('/^#/', $line)) {
 }
 
 $event = $event_line->to_event();
-print_r($event);
-//$event->insert();
+$event->insert();
