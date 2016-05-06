@@ -10,7 +10,7 @@ class EventLine {
     }
 
     function to_event() {
-        $event = new Event($this->year, $this->month, $this->day, $this->start_time, $this->finish_time, $this->title, $this->calendar_id);
+        $event = new Event($this->year, $this->month, $this->day, $this->start_time, $this->finish_time, $this->title, $this->detail, $this->calendar_id);
         return $event;
     }
 
@@ -22,7 +22,8 @@ class EventLine {
         $start_time = $cols[3];
         $finish_time = $cols[4];
         $title = $cols[5];
-        $calendar_name = $cols[6];
+        $detail = $cols[6];
+        $calendar_name = $cols[7];
         $calendar_id = self::calendar_id($calendar_name);
 
         $this->year = $year;
