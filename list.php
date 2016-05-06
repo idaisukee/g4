@@ -5,7 +5,7 @@ $token_array = json_decode($token_json, true);
 //        print_r($token_array);
 $bearer = $token_array['access_token'];
 
-$str = 'curl -H "Authorization: Bearer '. $bearer . '" https://www.googleapis.com/calendar/v3/calendars/primary/events';
+$str = 'curl -s -H "Authorization: Bearer '. $bearer . '" https://www.googleapis.com/calendar/v3/calendars/primary/events';
 print $str;
 $obj = shell_exec($str);
 
