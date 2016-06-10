@@ -7,9 +7,7 @@ $bearer = $token_array['access_token'];
 $id = trim(fgets(STDIN));
 
 $str = 'curl -s -H "Authorization: Bearer '. $bearer . '" https://www.googleapis.com/calendar/v3/calendars/primary/events/' . $id;
-print $str;
-print "\n";
 $obj = shell_exec($str);
 
 $dob = json_decode($obj); // decoded object
-print $dob->id . ' ' . $dob->summary . ' ' . $dob->start->dateTime . ' ' . $dob->end->dateTime;
+print $dob->id . ' ' . $dob->summary . ' ' . $dob->start->dateTime . ' ' . $dob->end->dateTime . "\n";
