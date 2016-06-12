@@ -27,7 +27,6 @@ $str_max = 'timeMax='.$encoded_max;
 
 $url = $url_base.'/'.$resource.'/'.$cal_id.'/'.$item.'?'.$str_q.'&'.$str_max.'&'.$str_min;
 
-echo $url;
 $curl = curl_init($url);
 $options = [
 	CURLOPT_HTTPHEADER => [
