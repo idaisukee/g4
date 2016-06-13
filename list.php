@@ -1,9 +1,10 @@
 <?php
 require_once('refresh.php');
 
-$q = $argv[1];
-$min = $argv[2];
-$max = $argv[3];
+$options = getopt('q:n:x:');
+$q = $options['q'];
+$min = $options['n'];
+$max = $options['x'];
 
 $token_json = refresh();
 $token_array = json_decode($token_json, true);
