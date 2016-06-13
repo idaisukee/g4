@@ -25,7 +25,7 @@ $str_min = 'timeMin='.$encoded_min;
 $encoded_max = urlencode($max);
 $str_max = 'timeMax='.$encoded_max;
 
-$url = $url_base.'/'.$resource.'/'.$cal_id.'/'.$item.'?'.$str_q.'&'.$str_max.'&'.$str_min;
+$url = $url_base.'/'.$service.'/'.$cal_id.'/'.$operation.'?'.$str_q.'&'.$str_max.'&'.$str_min;
 
 $curl = curl_init($url);
 $options = [
