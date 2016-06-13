@@ -1,5 +1,7 @@
 # 手順
 
+http://qiita.com/shin1ogawa/items/49a076f62e5f17f18fe5 も参照．
+
 google の site で json をもらって `constants/client_secret.json` に置く．
 
 `show_uri.php` を実行して認可する．表示された code を `constants/authorization_code` に置く．
