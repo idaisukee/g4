@@ -1,1 +1,0 @@
-curl --data "code=`cat constants/authorization_code`" --data "client_id=`cat constants/client_id`" --data "client_secret=`cat constants/client_secret`" --data "redirect_uri=`cat constants/redirect_uri`" --data "grant_type=authorization_code" --data "access_type=offline" https://www.googleapis.com/oauth2/v4/token
