@@ -1,10 +1,10 @@
 <?php
 require_once('refresh.php');
 
-$options = getopt('q:n:x:');
+$options = getopt('q:m:M:');
 $q = $options['q'];
-$min = $options['n'];
-$max = $options['x'];
+$min = $options['m'];
+$max = $options['M'];
 
 $token_json = refresh();
 $token_array = json_decode($token_json, true);
