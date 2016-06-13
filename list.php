@@ -13,8 +13,8 @@ $str_bearer = 'Authorization: Bearer '.$bearer;
 $url_base = 'https://www.googleapis.com/calendar/v3';
 
 $cal_id = 'primary';
-$resource = 'calendars';
-$item = 'events';
+$service = 'calendars';
+$operation = 'events';
 
 $encoded_q = urlencode($q);
 $str_q = 'q='.$encoded_q;
