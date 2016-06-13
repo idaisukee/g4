@@ -1,10 +1,13 @@
 <?php
 require_once('refresh.php');
+require_once('calendar_id.php');
 
-$options = getopt('q:m:M:');
+$options = getopt('q:m:M:n:');
 $q = $options['q'];
 $min = $options['m'];
 $max = $options['M'];
+$calendar_name = $options['n'];
+$cal_id = calendar_id($calendar_name);
 
 $token_json = refresh();
 $token_array = json_decode($token_json, true);
@@ -13,7 +16,6 @@ $bearer = $token_array['access_token'];
 $str_bearer = 'Authorization: Bearer '.$bearer;
 $url_base = 'https://www.googleapis.com/calendar/v3';
 
-$cal_id = 'primary';
 $service = 'calendars';
 $operation = 'events';
 
