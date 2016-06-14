@@ -7,3 +7,17 @@ google の site で json をもらって `constants/client_secret.json` に置�
 `show_uri.php` を実行して認可する．表示された code を `constants/authorization_code` に置く．
 
 `get_access_token.php` を実行して，結果を `constants/access_token.json` に置く．
+
+# usage
+
+```
+$ php list.php -q < search key > -n < calendar name >
+```
+
+```
+$ php get.php -i < event id >
+```
+
+```
+$ php delete.php -i < event id > -n < calendar name >
+```
