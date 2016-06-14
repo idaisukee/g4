@@ -1,5 +1,6 @@
 <?php
-$token_json = shell_exec('sh reflesh.sh');
+require_once('refresh.php');
+$token_json = refresh();
 //        print_r($token_json);
 $token_array = json_decode($token_json, true);
 //        print_r($token_array);
