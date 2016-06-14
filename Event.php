@@ -1,4 +1,5 @@
 <?php
+require_once('refresh.php');
 class Event {
     function __construct($year, $month, $day, $start_time, $finish_time, $title, $detail, $calendar_id) {
 
@@ -38,7 +39,7 @@ class Event {
     }
 
     function insert() {
-        $token_json = shell_exec('sh reflesh.sh');
+        $token_json = refresh();
         //        print_r($token_json);
         $token_array = json_decode($token_json, true);
         //        print_r($token_array);
