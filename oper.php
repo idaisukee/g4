@@ -11,7 +11,9 @@ function oper($array)
 	$service = $array['service'];
 	$operation = $array['operation'];
 	$http_method = $array['http_method'];
-	$id = $array['id'];
+	if (isset($array['id'])) {
+		$id = $array['id'];
+	}
 
 	$query = http_build_query(
 		[
