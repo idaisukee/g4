@@ -24,7 +24,11 @@ class LectureLine {
 		$teacher_rank = $cols[6];
 		$teacher_name = $cols[7];
 
-		$this->year = '2016';
+		if ( (int) $month < 10 ) {
+			$this->year = '2017';
+		} else {
+			$this->year = '2016';
+		}
 		$this->subject = $subject;
 		$this->month = $month;
 		$this->day = $day;
@@ -33,7 +37,7 @@ class LectureLine {
 		$this->teacher_section = $teacher_section;
 		$this->teacher_rank = $teacher_rank;
 		$this->teacher_name = $teacher_name;
-		$this->calendar_name = '2016e4E';
+		$this->calendar_name = '2016l3i';
 		$this->calendar_id = self::calendar_id($this->calendar_name);
 	}
 }
