@@ -23,5 +23,5 @@ $dob = json_decode($result); // decoded object
 
 $items = $dob->items;
 foreach ($items as $item) {
-  print $item->summary . ' ' . $item->start->dateTime . ' ' .$item->id . "\n";
+  print $item->summary . ' ' . $item->start->dateTime . ' ' . $item->end->dateTime . ' ' . $item->id . "\n";
 }
