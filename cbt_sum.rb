@@ -1,4 +1,6 @@
 file = ENV['PRD'] + '/dat/cbt/cbt.dat'
+total = 68
+
 
 ar = Array.new
 sum = 0.0
@@ -16,8 +18,13 @@ ar.each do |line|
 	time = line[1].to_f
 	ratio = time / sum
 	ratio_sum += ratio
-	puts [line[0],
-				 (line[0].to_i + 9).to_s,
-				 time,
-				 ratio_sum].join(' ')
+	puts \
+	[
+	 line[0],
+	 (line[0].to_i + 9).to_s,
+	 time,
+	 ratio,
+	 ratio_sum,
+	 total * ratio_sum
+	].join(' ')
 end
